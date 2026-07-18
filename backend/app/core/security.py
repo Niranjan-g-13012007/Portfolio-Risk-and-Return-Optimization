@@ -5,21 +5,30 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 
 from jose import jwt, JWTError  # type: ignore
-from passlib.context import CryptContext  # type: ignore
+import bcrypt
 
 from app.core.config import JWT_ALGORITHM, JWT_EXPIRE_MINUTES, JWT_SECRET
-
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 # ── Passwords ────────────────────────────────────────────────────────────────
 
 def hash_password(plain: str) -> str:
-    return pwd_context.hash(plain)
+    # Hash password using direct bcrypt call
+    pw_bytes = plain.encode("utf-8")
+    salt = bcrypt.gensalt()
+    hashed = bcrypt.hashpw(pw_bytes, salt)
+    return hashed.decode("utf-8")
 
 
 def verify_password(plain: str, hashed: str) -> bool:
-    return pwd_context.verify(plain, hashed)
+    # Verify password using direct bcrypt call
+    try:
+        pw_bytes = plain.encode("utf-8")
+        hash_bytes = hashed.encode("utf-8")
+        return bcrypt.checkpw(pw_bytes, hash_bytes)
+    except Exception:
+        return False
+
 
 
 # ── JWT ───────────────────────────────────────────────────────────────────────

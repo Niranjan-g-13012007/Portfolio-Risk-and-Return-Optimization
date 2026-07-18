@@ -27,7 +27,7 @@ async def connect() -> None:
     await db.users.create_index("email", unique=True)
     await db.users.create_index("phone", unique=True)
     await db.portfolio_history.create_index("user_id")
-    print("✓ MongoDB Atlas connected")
+    print("* MongoDB Atlas connected")
 
 
 async def disconnect() -> None:
@@ -35,4 +35,4 @@ async def disconnect() -> None:
     if _client:
         _client.close()
         _client = None
-        print("✓ MongoDB disconnected")
+        print("* MongoDB disconnected")
