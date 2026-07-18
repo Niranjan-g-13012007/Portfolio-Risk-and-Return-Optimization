@@ -1,0 +1,31 @@
+export function formatCurrency(value, options = {}) {
+  const { compact = false } = options;
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: compact ? 1 : 0,
+    notation: compact ? "compact" : "standard",
+  }).format(value ?? 0);
+}
+
+export function formatPercent(value, decimals = 2) {
+  return `${(value ?? 0).toFixed(decimals)}%`;
+}
+
+export function formatNumber(value, decimals = 2) {
+  return new Intl.NumberFormat("en-IN", {
+    maximumFractionDigits: decimals,
+  }).format(value ?? 0);
+}
+
+export const STOCK_COLORS = [
+  "#10B981", "#3B82F6", "#F59E0B", "#EC4899", "#8B5CF6",
+  "#06B6D4", "#F43F5E", "#84CC16", "#EAB308", "#6366F1",
+];
+
+export const PERIOD_LABELS = {
+  "1mo": "1 Month",
+  "6mo": "6 Months",
+  "1y": "1 Year",
+  "3y": "3 Years",
+};
