@@ -24,9 +24,11 @@ TRADING_DAYS = 252
 N_SIMULATIONS = 10_000
 
 RISK_TARGET_PERCENTILE = {
-    "Low": 0.20,     # closer to the minimum-volatility end of the frontier
-    "Medium": 0.50,
-    "High": 0.85,    # closer to the maximum-return end of the frontier
+    "Low": 0.10,          # minimum-volatility end of the frontier
+    "Lower Medium": 0.30, # slightly conservative
+    "Medium": 0.50,       # balanced
+    "Upper Medium": 0.70, # slightly aggressive
+    "High": 0.90,         # maximum-return end of the frontier
 }
 
 

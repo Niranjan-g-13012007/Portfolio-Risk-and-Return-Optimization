@@ -4,8 +4,8 @@ from typing import List, Literal, Optional
 from pydantic import BaseModel, Field
 
 
-RiskLevel = Literal["Low", "Medium", "High"]
-Period = Literal["1mo", "6mo", "1y", "3y"]
+RiskLevel = Literal["Low", "Lower Medium", "Medium", "Upper Medium", "High"]
+Period = Literal["1mo", "6mo", "1y", "3y", "5y", "7y", "10y", "15y"]
 
 
 class StockInfo(BaseModel):

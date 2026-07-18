@@ -35,6 +35,7 @@ export default function InvestmentForm({ stocks, loading, onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit(submit)} className="space-y-8">
+      {/* Investment Amount */}
       <div>
         <label className="mb-2 block text-sm font-medium text-slate-300">Investment Amount</label>
         <div className="relative">
@@ -51,16 +52,23 @@ export default function InvestmentForm({ stocks, loading, onSubmit }) {
         {errors.amount && <p className="mt-1.5 text-xs text-rose-400">Enter an amount of at least ₹1,000.</p>}
       </div>
 
+      {/* Stock Selector */}
       <div>
-        <label className="mb-2 block text-sm font-medium text-slate-300">Select Stocks</label>
-        <StockSelector stocks={stocks} selected={selectedStocks} onChange={setSelectedStocks} />
+        <label className="mb-2 block text-sm font-medium text-slate-300">
+          Select Stocks
+          <span className="ml-2 rounded-full bg-white/5 px-2 py-0.5 text-[10px] font-mono text-slate-500">
+            2 – 10 stocks
+          </span>
+        </label>
+        <StockSelector stocks={stocks} selected={selectedStocks} onChange={setSelectedStocks} maxSelect={10} />
         {selectedStocks.length < 2 && (
           <p className="mt-1.5 text-xs text-amber-400">Select at least 2 stocks to continue.</p>
         )}
       </div>
 
+      {/* Risk Preference */}
       <div>
-        <label className="mb-2 block text-sm font-medium text-slate-300">Risk Preference</label>
+        <label className="mb-3 block text-sm font-medium text-slate-300">Risk Preference</label>
         <Controller
           name="risk"
           control={control}
@@ -68,13 +76,14 @@ export default function InvestmentForm({ stocks, loading, onSubmit }) {
         />
       </div>
 
+      {/* Investment Period */}
       <div>
         <label className="mb-2 block text-sm font-medium text-slate-300">Investment Period</label>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="grid grid-cols-4 gap-2">
           {PERIOD_OPTIONS.map(([value, label]) => (
             <label key={value} className="relative">
               <input type="radio" value={value} {...register("period")} className="peer sr-only" />
-              <div className="cursor-pointer rounded-xl border border-white/10 bg-white/[0.02] py-3 text-center text-sm font-medium text-slate-300 transition-all peer-checked:border-skyline-500/50 peer-checked:bg-skyline-500/10 peer-checked:text-white hover:bg-white/5">
+              <div className="cursor-pointer rounded-xl border border-white/10 bg-white/[0.02] py-2.5 text-center text-xs font-medium text-slate-300 transition-all peer-checked:border-skyline-500/50 peer-checked:bg-skyline-500/10 peer-checked:text-white hover:bg-white/5">
                 {label}
               </div>
             </label>
@@ -100,3 +109,4 @@ export default function InvestmentForm({ stocks, loading, onSubmit }) {
     </form>
   );
 }
+
