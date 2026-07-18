@@ -13,7 +13,6 @@ import { fetchStocks } from "../services/api";
 import { useAuth } from "../context/AuthContext";
 import { compareApi } from "../services/compareApi";
 import { historyApi } from "../services/historyApi";
-import { fetchStocks, optimizePortfolio } from "../services/api";
 import { useToast } from "../context/ToastContext";
 import StockSelector from "../components/StockSelector";
 import RiskSlider from "../components/RiskSlider";
