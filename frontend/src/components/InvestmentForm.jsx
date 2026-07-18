@@ -7,8 +7,10 @@ import { PERIOD_LABELS } from "../utils/formatters";
 
 const PERIOD_OPTIONS = Object.entries(PERIOD_LABELS);
 
-export default function InvestmentForm({ stocks, loading, onSubmit }) {
-  const [selectedStocks, setSelectedStocks] = useState(["AAPL", "MSFT", "NVDA"]);
+export default function InvestmentForm({ stocks, loading, onSubmit, prefill }) {
+  const [selectedStocks, setSelectedStocks] = useState(
+    prefill?.stocks?.length ? prefill.stocks : ["AAPL", "MSFT", "NVDA"]
+  );
 
   const {
     register,
@@ -17,9 +19,9 @@ export default function InvestmentForm({ stocks, loading, onSubmit }) {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      amount: 100000,
-      risk: "Medium",
-      period: "1y",
+      amount: prefill?.amount ?? 100000,
+      risk:   prefill?.risk   ?? "Medium",
+      period: prefill?.period ?? "1y",
     },
   });
 
