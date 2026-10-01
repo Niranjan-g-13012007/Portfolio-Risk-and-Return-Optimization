@@ -1,132 +1,477 @@
-# PortfolioIQ — Portfolio Risk & Return Optimization
+<div align="center">
 
-A full-stack fintech dashboard that recommends an optimal stock portfolio
-allocation using **Modern Portfolio Theory** (MPT): mean-variance
-optimization, an efficient frontier built from 10,000 simulated portfolios,
-and `scipy.optimize` solves for the Maximum Sharpe Ratio and Minimum
-Volatility portfolios.
+<a href="https://optivest-psi.vercel.app/">
 
+<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=42&duration=2600&pause=900&color=7C3AED&center=true&vCenter=true&width=900&height=80&lines=OPTIVEST;RISK+%26+RETURN+INTELLIGENCE;PORTFOLIO+OPTIMIZATION+REIMAGINED" />
+
+</a>
+
+<br>
+
+<img src="https://img.shields.io/badge/1ST%20PRIZE-CENTRE%20OF%20EXCELLENCE%20HACKATHON-111111?style=for-the-badge&labelColor=111111&color=8B5CF6" />
+
+<br><br>
+
+<a href="https://optivest-psi.vercel.app/">
+<img src="https://img.shields.io/badge/EXPLORE%20LIVE%20%20%E2%86%92-7C3AED?style=for-the-badge&labelColor=111111" />
+</a>
+
+</div>
+
+<br>
+
+<div align="center">
+
+### **A quantitative portfolio intelligence platform built to turn market data into informed portfolio allocations.**
+
+<br>
+
+`MODERN PORTFOLIO THEORY`   `10,000 SIMULATIONS`   `EFFICIENT FRONTIER`   `MAX SHARPE`   `MIN VOLATILITY`
+
+</div>
+
+<br>
+
+---
+
+<div align="center">
+
+## **THE IDEA**
+
+</div>
+
+<br>
+
+**OptiVest** looks beyond individual stock performance.
+
+Instead of asking:
+
+> *Which stock performed better?*
+
+OptiVest explores:
+
+> **How should a collection of assets be allocated to create a portfolio with a desired risk-return profile?**
+
+It brings historical market data, statistical analysis, portfolio simulation and numerical optimization together inside a single interactive experience.
+
+---
+
+<div align="center">
+
+## **FROM MARKET DATA TO PORTFOLIO**
+
+```mermaid
+flowchart LR
+    A["Market Data"] --> B["Return Analysis"]
+    B --> C["Risk & Covariance"]
+    C --> D["10,000 Portfolios"]
+    D --> E["Efficient Frontier"]
+    E --> F{"Optimization"}
+    F --> G["Maximum Sharpe"]
+    F --> H["Minimum Volatility"]
+    G --> I["Risk-Based Allocation"]
+    H --> I
+    I --> J["OptiVest"]
+    
+    style A fill:#111827,stroke:#7c3aed,color:#fff
+    style B fill:#111827,stroke:#7c3aed,color:#fff
+    style C fill:#111827,stroke:#7c3aed,color:#fff
+    style D fill:#111827,stroke:#7c3aed,color:#fff
+    style E fill:#111827,stroke:#7c3aed,color:#fff
+    style F fill:#7c3aed,stroke:#7c3aed,color:#fff
+    style G fill:#111827,stroke:#7c3aed,color:#fff
+    style H fill:#111827,stroke:#7c3aed,color:#fff
+    style I fill:#111827,stroke:#7c3aed,color:#fff
+    style J fill:#7c3aed,stroke:#7c3aed,color:#fff
 ```
-portfolio-optimizer/
-├── backend/     FastAPI service — data fetching, MPT engine, PDF reports
-└── frontend/    React 19 + Vite + Tailwind dashboard
+
+</div>
+
+---
+
+<div align="center">
+
+# **THE EXPERIENCE**
+
+</div>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### `01` — Explore
+
+Select and analyze a curated set of stocks through a clean financial dashboard.
+
+</td>
+
+<td width="50%" valign="top">
+
+### `02` — Simulate
+
+Generate **10,000 portfolio combinations** and evaluate their risk-return characteristics.
+
+</td>
+</tr>
+
+<tr>
+<td width="50%" valign="top">
+
+### `03` — Optimize
+
+Identify mathematically optimized portfolios using constrained numerical optimization.
+
+</td>
+
+<td width="50%" valign="top">
+
+### `04` — Understand
+
+Visualize the efficient frontier and compare portfolio characteristics through an interactive interface.
+
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+
+## **BUILT AROUND FOUR CORE SIGNALS**
+
+<br>
+
+<table>
+<tr>
+
+<td align="center" width="25%">
+
+### `01`
+
+**RETURN**
+
+Historical performance analysis
+
+</td>
+
+<td align="center" width="25%">
+
+### `02`
+
+**RISK**
+
+Portfolio volatility measurement
+
+</td>
+
+<td align="center" width="25%">
+
+### `03`
+
+**CORRELATION**
+
+Asset relationship analysis
+
+</td>
+
+<td align="center" width="25%">
+
+### `04`
+
+**ALLOCATION**
+
+Portfolio-level optimization
+
+</td>
+
+</tr>
+</table>
+
+</div>
+
+---
+
+<div align="center">
+
+# **THE OPTIMIZATION ENGINE**
+
+</div>
+
+<br>
+
+```text
+     HISTORICAL DATA
+            │
+            ▼
+      RETURN ANALYSIS
+            │
+            ▼
+     RISK MODELING
+            │
+            ▼
+    ┌─────────────────┐
+    │ 10,000 PORTFOLIOS│
+    │    SIMULATED     │
+    └────────┬────────┘
+             │
+             ▼
+      EFFICIENT FRONTIER
+             │
+        ┌────┴────┐
+        ▼         ▼
+   MAX SHARPE   MIN VOL
+        │         │
+        └────┬────┘
+             ▼
+      RISK PREFERENCE
+             │
+             ▼
+     PORTFOLIO ALLOCATION
+```
+
+<br>
+
+<div align="center">
+
+**The heavy computation stays behind the interface.
+The user sees the signal, not the complexity.**
+
+</div>
+
+---
+
+<div align="center">
+
+# **PRODUCT**
+
+<br>
+
+### **Risk. Return. Allocation. — in one view.**
+
+<br>
+
+<a href="https://optivest-psi.vercel.app/">
+
+<img src="https://img.shields.io/badge/OPEN%20OPTIVEST%20%E2%86%97-111111?style=for-the-badge&labelColor=111111&color=7C3AED" />
+
+</a>
+
+<br><br>
+
+**Live:** [optivest-psi.vercel.app](https://optivest-psi.vercel.app/)
+
+</div>
+
+---
+
+<div align="center">
+
+# **ENGINEERING**
+
+</div>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Frontend
+
+**React 19**
+**Vite**
+**Tailwind CSS**
+**Recharts**
+**Axios**
+**Framer Motion**
+**Lucide Icons**
+**React Hook Form**
+
+</td>
+
+<td width="50%" valign="top">
+
+### Backend
+
+**FastAPI**
+**Python**
+**NumPy**
+**Pandas**
+**SciPy**
+**Scikit-learn**
+**yfinance**
+**ReportLab**
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=react,vite,tailwind,python,fastapi,numpy,pandas,scipy" />
+
+</div>
+
+---
+
+<div align="center">
+
+# **BUILT FOR THE REAL WORLD**
+
+### even when the network isn't perfect.
+
+</div>
+
+OptiVest uses **Yahoo Finance through `yfinance`** for market data.
+
+When live market data cannot be retrieved, the backend falls back to a **seeded synthetic data source** so that the application remains operational during demonstrations.
+
+The application explicitly exposes the simulated-data state rather than silently presenting it as live market information.
+
+```text
+              MARKET DATA
+                   │
+             ┌─────┴─────┐
+             │           │
+          AVAILABLE   UNAVAILABLE
+             │           │
+             ▼           ▼
+         LIVE DATA   SAFE FALLBACK
+             │           │
+             └─────┬─────┘
+                   ▼
+             OPTIMIZATION
+                   │
+                   ▼
+                OPTIVEST
 ```
 
 ---
 
-## 1. Backend setup
+<div align="center">
 
-```bash
-cd backend
-python3 -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
-```
+# **THE RESULT**
 
-The API is now live at `http://127.0.0.1:8000`. Interactive docs at
-`http://127.0.0.1:8000/docs`.
+<br>
 
-### API endpoints
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=19&duration=2200&pause=700&color=8B5CF6&center=true&vCenter=true&width=760&height=45&lines=10%2C000+PORTFOLIOS;ONE+RISK%E2%80%93RETURN+LANDSCAPE;MAXIMUM+SHARPE;MINIMUM+VOLATILITY;DATA+%E2%86%92+INSIGHT+%E2%86%92+ALLOCATION" />
 
-| Method | Path          | Description                                  |
-|--------|---------------|-----------------------------------------------|
-| GET    | `/`           | Health check                                   |
-| GET    | `/stocks`     | Curated list of available stocks               |
-| POST   | `/optimize`   | Runs the MPT engine, returns full analysis     |
-| POST   | `/report/pdf` | Renders a downloadable PDF of an analysis      |
-
-**Note on data:** the backend calls Yahoo Finance via `yfinance`. If that
-call fails for any reason — no internet, rate limiting, a firewalled venue
-network — it automatically falls back to a seeded synthetic price series so
-the demo never crashes. The API response includes `is_simulated_data: true`
-whenever this fallback was used, and the frontend surfaces a visible notice
-so nothing is presented as real market data without disclosure.
+</div>
 
 ---
 
-## 2. Frontend setup
+<div align="center">
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+# **🏆 1ST PRIZE**
 
-The app is now live at `http://127.0.0.1:5173`. In development, Vite proxies
-`/api/*` requests to `http://127.0.0.1:8000` (see `vite.config.js`), so no
-extra configuration is needed as long as the backend is running.
+### **CENTRE OF EXCELLENCE HACKATHON**
 
-### Production build
+**Kongu Engineering College**
 
-```bash
-npm run build     # outputs to frontend/dist
-npm run preview   # serve the production build locally
-```
+<br>
 
-Before building for a separate-origin deployment, copy `.env.example` to
-`.env` and set `VITE_API_URL` to your deployed backend's URL.
+OptiVest was developed and presented as a four-member collaborative project and secured **1st Prize** at the Centre of Excellence Hackathon.
+
+</div>
 
 ---
 
-## 3. Running both together
+<div align="center">
 
-Open two terminals:
+# **THE TEAM**
 
-```bash
-# Terminal 1
-cd backend && uvicorn main:app --reload --port 8000
+### Four contributors. One product.
 
-# Terminal 2
-cd frontend && npm run dev
-```
+<br>
 
-Visit `http://127.0.0.1:5173`.
+<table>
+<tr>
+
+<td align="center" width="25%">
+
+<a href="https://github.com/Niranjan-g-13012007">
+
+<strong>NIRANJAN G</strong>
+
+</a>
+
+<br><br>
+
+<sub>GitHub Profile ↗</sub>
+
+</td>
+
+<td align="center" width="25%">
+
+<a href="https://github.com/nirmal-kumar-v">
+
+<strong>NIRMAL KUMAR V</strong>
+
+</a>
+
+<br><br>
+
+<sub>GitHub Profile ↗</sub>
+
+</td>
+
+<td align="center" width="25%">
+
+<a href="https://github.com/NITHISH-2207">
+
+<strong>NITHISH</strong>
+
+</a>
+
+<br><br>
+
+<sub>GitHub Profile ↗</sub>
+
+</td>
+
+<td align="center" width="25%">
+
+<a href="https://github.com/pranesh-deepan">
+
+<strong>PRANESH DEEPAN</strong>
+
+</a>
+
+<br><br>
+
+<sub>GitHub Profile ↗</sub>
+
+</td>
+
+</tr>
+</table>
+
+<br>
+
+### **Equal Contribution**
+
+All four team members contributed equally to building OptiVest — across **ideation, engineering, optimization, interface design, testing and presentation.**
+
+</div>
 
 ---
 
-## 4. Deployment
+<br>
 
-**Backend** — any Python host works (Render, Railway, Fly.io, an EC2 box):
+<div align="center">
 
-```bash
-pip install -r requirements.txt
-uvicorn main:app --host 0.0.0.0 --port $PORT
-```
+<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=24&duration=3500&pause=1200&color=777777&center=true&vCenter=true&width=700&height=50&lines=ANALYZE.;OPTIMIZE.;UNDERSTAND+RISK." />
 
-Set `CORSMiddleware` origins in `main.py` to your frontend's deployed URL
-instead of `"*"` once you have it.
+<br><br>
 
-**Frontend** — any static host works (Vercel, Netlify, Cloudflare Pages):
+<a href="https://optivest-psi.vercel.app/">
 
-```bash
-npm run build
-# deploy the frontend/dist folder
-```
+<img src="https://img.shields.io/badge/OPTIVEST%20%E2%86%97-7C3AED?style=for-the-badge&labelColor=111111" />
 
-Set the `VITE_API_URL` environment variable in your hosting provider's
-dashboard to your deployed backend URL before building.
+</a>
 
----
+<br><br>
 
-## 5. Tech stack
+<sub>Portfolio Risk & Return Intelligence</sub>
 
-**Frontend:** React 19, Vite, Tailwind CSS, React Router, Axios, Framer
-Motion, Lucide Icons, Recharts, React Hook Form.
-
-**Backend:** FastAPI, yfinance, pandas, numpy, scipy, scikit-learn,
-uvicorn, reportlab (PDF export).
-
-**Optimization approach:** daily/annualized returns → covariance matrix →
-`scipy.optimize.minimize` (SLSQP) for Max Sharpe & Min Volatility
-portfolios → a 10,000-portfolio Monte Carlo cloud for the efficient
-frontier chart → a risk-level → target-return mapping that picks a point
-along the frontier for "Low / Medium / High" risk preference.
-
----
-
-## 6. Disclaimer
-
-This project is built for a hackathon demonstration. It is **not**
-financial advice. Historical returns and simulated data do not guarantee
-future performance.
+</div>
